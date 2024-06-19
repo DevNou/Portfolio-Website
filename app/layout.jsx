@@ -3,12 +3,13 @@ import "./globals.css";
 
 //components
 import Header from "@/components/Header";
+import PageTranstition from "@/components/PageTranstition";
 
-const jetbrainsMono = JetBrains_Mono({ 
+const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  weight : ["100","200","300","400","500","600","700","800"],
-  variable : "--font-jetbrainsMono"
- });
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+  variable: "--font-jetbrainsMono"
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -20,8 +21,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={jetbrainsMono.variable}>
         <Header />
-        {children}
-        </body>
+        <PageTranstition>{children}</PageTranstition>
+      </body>
     </html>
   );
 }
