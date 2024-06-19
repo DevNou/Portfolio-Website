@@ -4,6 +4,7 @@ import "./globals.css";
 //components
 import Header from "@/components/Header";
 import PageTranstition from "@/components/PageTranstition";
+import StairTransition from "@/components/StairTransition";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={jetbrainsMono.variable}>
         <Header />
+        <StairTransition/>
         <PageTranstition>{children}</PageTranstition>
       </body>
     </html>
