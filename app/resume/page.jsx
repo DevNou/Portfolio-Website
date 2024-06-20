@@ -11,7 +11,7 @@ import {
 } from "react-icons/fa";
 
 import {
-  SiTailwindcss, SiNextdotjs
+  SiTailwindcss, 
 } from "react-icons/si";
 
 const about = {
