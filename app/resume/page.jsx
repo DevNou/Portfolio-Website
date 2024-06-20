@@ -1,6 +1,5 @@
 "use client";
 
-import { Description } from "@radix-ui/react-dialog";
 import {
   FaHtml5,
   FaCss3,
@@ -17,7 +16,7 @@ import {
 
 const about = {
   title: 'About me',
-  description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio vero omnis sed mollitia cupiditate ipsam veritatis deleniti iure autem, maiores velit dolores quidem necessitatibus voluptates eaque culpa perferendis, debitis quis?",
+  description: "I am a Web Developer graduated from IEK Delta 360 in Thessaloniki. I have knowledge of web applications, programming languages, and web services — including API,CSS3, HTML5, JavaScript, TypeScript, Angular, jQuery, Git, Docker, REST, and Graphic Design skills. I am understanding of full-stack web, including protocols and web server optimization standards with intermediate level experience. Excited to connect and learn from experienced professionals in the field.",
 
   info: [
     {
@@ -54,7 +53,7 @@ const about = {
 const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My experience",
-  description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum quidem a repellat nihil in sapiente dolore maxime explicabo, ducimus omnis asperiores sed voluptas. Ducimus eos perspiciatis molestiae facilis dolor nostrum!",
+  description: "",
   items:
     [
       {
@@ -73,11 +72,11 @@ const experience = {
 const education = {
   icon: "/assets/resume/cap.svg",
   title: "My education",
-  description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum quidem a repellat nihil in sapiente dolore maxime explicabo, ducimus omnis asperiores sed voluptas. Ducimus eos perspiciatis molestiae facilis dolor nostrum!",
+  description: "",
   items:
     [
       {
-        institution: "Online Course Platform/Udemy",
+        institution: "Online Course Platform-Udemy",
         degree: "Web developer Bootcamp",
         duration: "2024"
       },
@@ -106,6 +105,45 @@ const education = {
         degree: "Degree in Software Engineering",
         duration: "09/2021-06/2023"
       },
+    ]
+}
+const courses = {
+  icon: "/assets/resume/cap.svg",
+  title: "My courses",
+  description: "",
+  items:
+    [
+      {
+        institution: "Online Platform",
+        degree: "Bussines in the digital age",
+        duration: "2024"
+      },
+      {
+        institution: "Online Platform",
+        degree: "Branding mockup in graphic design",
+        duration: "2023"
+      },
+      {
+        institution: "Online Platform",
+        degree: "Personality Marketing",
+        duration: "2023"
+      },
+      {
+        institution: "Thessaloniki Chamber of Commerce",
+        degree: "Cyber Secutiry-Social Media",
+        duration: "2022"
+      },
+      {
+        institution: "Online Platform",
+        degree: "GDPR ib bussiness",
+        duration: "2022"
+      },
+      {
+        institution: "Online Platform",
+        degree: "Marketing",
+        duration: "2022"
+      },
+
 
     ]
 }
@@ -152,8 +190,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 import { Tooltip, TooltipContent, TooltipTrigger, TooltipProvider } from "@/components/ui/tooltip";
 
-import { ScrollArea } from "@/components/ui/scroll-area";
-
 import { motion } from "framer-motion";
 
 
@@ -173,6 +209,7 @@ const Resume = () => {
           gap-6">
             <TabsTrigger value="experience">Experience</TabsTrigger>
             <TabsTrigger value="education">Education</TabsTrigger>
+            <TabsTrigger value="courses">Courses</TabsTrigger>
             <TabsTrigger value="skills">Skills</TabsTrigger>
             <TabsTrigger value="about">About me</TabsTrigger>
           </TabsList>
@@ -215,6 +252,35 @@ const Resume = () => {
                 <scrollArea className="h-[400px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {education.items.map((item, index) => {
+                      return (
+                        <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify center items-center
+                  lg:items-start gap-1">
+                          <span className="text-accent">{item.duration}</span>
+                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                            {item.degree}
+                          </h3>
+                          <div className="flex items-center gap-3">
+                            <span className="w-[5px] h-[5px] rounded-full bg-accent"></span>
+                            <p className="text-white/60">{item.institution}</p>
+                          </div>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </scrollArea>
+              </div>
+            </TabsContent>
+
+
+            <TabsContent value="courses" className="w-full">
+              <div className="flex flex-col gap-[30px] text-center xd:text-left">
+                <h3 className="text-4xl font-bold">{education.title}</h3>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  {courses.description}
+                  </p>
+                <scrollArea className="h-[400px]">
+                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                    {courses.items.map((item, index) => {
                       return (
                         <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify center items-center
                   lg:items-start gap-1">

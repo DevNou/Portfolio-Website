@@ -17,7 +17,6 @@ import {
 
 import Link from "next/link";
 import Image from 'next/image';
-import { Description } from '@radix-ui/react-dialog';
 import WorkSliderBtns from '@/components/WorkSliderBtns';
 
 const projects = [
@@ -38,8 +37,8 @@ const projects = [
       }
     ],
     image: '/assets/work/ps-vr-headset.png',
-    live: '',
-    github: "",
+    live: 'https://vr-headset-gamma.vercel.app/',
+    github: "https://github.com/DevNou/Vr-Headset",
   },
   {
     num: '02',
@@ -85,7 +84,7 @@ const Work = () => {
           xl:justify-between order-2 xl:orded-none'>
 
             <div className="flex flex-col gap-[30px] h-[50%]">
-              {/* {utline} */}
+              {/* {outline} */}
               <div className="text-8xl leading-none font-extrabold text-transparent
               text-outline">{project.num}
               </div>
