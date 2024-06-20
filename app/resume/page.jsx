@@ -149,7 +149,7 @@ const courses = {
 }
 const skills = {
   title: "My skills",
-  description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum quidem a repellat nihil in sapiente dolore maxime explicabo, ducimus omnis asperiores sed voluptas. Ducimus eos perspiciatis molestiae facilis dolor nostrum!",
+  description: "",
   skillList: [
     {
       icon: <FaHtml5 />,
