@@ -60,6 +60,26 @@ const projects = [
     live: '',
     github: "",
   },
+  {
+    num: '03',
+    gategory: 'frontend',
+    title: 'Dictionary App ',
+    description: 'This project is a website designed to find words and listen them. It includes various sections such as a login page,customer detaitls, and more.',
+    stack: [
+      {
+        name: 'Html 5'
+      },
+      {
+        name: 'Scss'
+      },
+      {
+        name: 'JavaScript'
+      }
+    ],
+    image: '',
+    live: 'https://dictionary-app-omega-ruddy.vercel.app/',
+    github: "https://github.com/DevNou/Dictionary-App.git",
+  },
 
 
 ]
